@@ -93,7 +93,7 @@ div > img {
     margin-bottom: 22px;
 }
 
-.opcoes div :nth-child(2) {
+.opcoes div :nth-last-child(4) {
     font-family: 'Righteous', cursive;
 }
 
@@ -144,6 +144,15 @@ div > img {
 .bebidaselecionada > ion-icon,
 .sobremesaselecionada  > ion-icon {
     display: block;
+}
+
+.valor {
+    display: flex;
+    flex-direction: row;
+}
+
+.valor :nth-child(2){
+    margin: 0 6px;
 }
 
 ion-icon {
