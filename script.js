@@ -1,3 +1,4 @@
+// Variaveis auxiliares
 let prato = false;
 let bebida = false;
 let sobremesa = false;
@@ -9,6 +10,7 @@ let bebidapreco;
 let sobremesapreco;
 let valortotal;
 
+// Essa função me informa qual prato a pessoa selecinou, retornando o seu nome, preço e uma variavel auxiliar prato pra informar que o prato ja foi escolhido
 function selecionandoprato(escolhido) {
     const  pratoantigo = document.querySelector(".pratoselecionado");
     if (pratoantigo == null){
@@ -28,6 +30,7 @@ function selecionandoprato(escolhido) {
     return prato, pratonome, pratopreco;
 }
 
+// Essa função me informa qual bebida a pessoa selecinou, retornando o seu nome, preço e uma variavel auxiliar bebida pra informar que a bebida ja foi escolhido
 function selecionandobebidas(escolhido) {
     const  bebidaantigo = document.querySelector(".bebidaselecionada");
     if (bebidaantigo == null){
@@ -44,9 +47,10 @@ function selecionandobebidas(escolhido) {
     const preco = document.querySelector(".bebidaselecionada .preco");
     bebidapreco = preco.innerHTML;
 
-    return  bebida, bebidanome,    bebidapreco;
+    return  bebida, bebidanome, bebidapreco;
 }
 
+// Essa função me informa qual sobremesa a pessoa selecinou, retornando o seu nome, preço e uma variavel auxiliar sobremesa pra informar que o prato ja foi escolhido
 function selecionandosobremesas(escolhido) {
     const  sobremesaantigo = document.querySelector(".sobremesaselecionada");
     if (sobremesaantigo == null){
@@ -66,6 +70,7 @@ function selecionandosobremesas(escolhido) {
     return  sobremesa, sobremesanome,    sobremesapreco;
 }
 
+// Função que ativa o botão de fechar pedido caso o cliente ja tenha selecionado os 3 itens
 function escolheu() {
     if ((prato == true) && (bebida == true) && (sobremesa == true)){
         const barra = document.querySelector(".barra");
@@ -73,6 +78,7 @@ function escolheu() {
     }
 }
 
+// função que é acionada quando a pessoa clica em fechar pedido e da o nome e os preços dos itens e o total
 function confirmar() {
     if ((prato == false) || (bebida == false) || (sobremesa == false)){
     
@@ -104,12 +110,14 @@ function confirmar() {
     }
 }
 
+// função que retorna a seleção dos itens
 function cancelou() {
     const confirmar = document.querySelector(".confirmar");
     confirmar.classList.remove("confirmar");
     confirmar.classList.add("confirmacao");
 }
 
+// função que pede o nome e endereço, cria o link e redireciona a pessoa pra mensagem do wpp
 function confirmou() {
     let nome = prompt("Qual é seu nome:");
     let endereco = prompt("Qual é o seu endereço:");

@@ -17,6 +17,8 @@
         <p>Primeiro, seu prato</p>
 
         <div class="opcoes">
+            <!-- quando ele clica em algum prato, ele primeiro seleciona ele com a função selecionandoprato e caso ele ja tenha selecionado
+            um prato uma sobremesa e uma bebida a função escolheu ativa o botao de finalizar pedido-->
             <div onclick="selecionandoprato(this); escolheu()">
                 <img src="imagens/typical-brazilian-dish-called-feijoada-made-with-black-beans-pork-sausage.jpg" >
 
@@ -210,6 +212,7 @@
         </div>
     </div>
 
+    <!-- Casse do botão de finalizar pedido que só fica atico caso a pessoa escolha 3 itens -->
     <div class="barra" onclick="confirmar()">
         <div>
             <p>Selecione os 3 itens para fechar o pedido</p>
@@ -219,6 +222,7 @@
         </div>
     </div>
 
+    <!-- Caso a pessoa clicar em fechar pedido ela entra nessa classe pra confirmar o seu pedido-->
     <div class="confirmacao">
         <div>
             <p>Confirme seu pedido</p>
